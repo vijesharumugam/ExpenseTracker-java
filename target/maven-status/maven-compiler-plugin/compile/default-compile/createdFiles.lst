@@ -1,9 +1,10 @@
 com\tracker\gui\ExpenseTrackerGUI.class
 com\tracker\gui\ExpenseGUI.class
+com\tracker\dao\CategoryDAO.class
 com\tracker\model\Expense.class
 com\tracker\gui\CategoryGUI.class
-com\tracker\dao\categoryDAO.class
+com\tracker\dao\ExpenseTrackerDAO.class
 com\tracker\util\DatabaseConnection.class
+com\tracker\gui\CategoryGUI$1.class
 com\tracker\Main.class
-com\tracker\dao\expenseDAO.class
 com\tracker\model\Category.class

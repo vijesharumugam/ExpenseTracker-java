@@ -4,21 +4,23 @@ public class Category {
     private int id;
     private String type;
 
-    public Category(int id,String type){
+    public Category(String type) {
+        this.type = type;
+    }
+    public Category(int id, String type) {
         this.id = id;
         this.type = type;
-     }
+    }
 
-     public int getId(){
+    public int getId() {
         return id;
-     }
-     public String getType(){
+    }
+
+    public String getType() {
         return type;
-     }
-     public void setId(){
-        this.id = id;
-     }
-     public void setType(){
+    }
+
+    public void setType(String type) {
         this.type = type;
-     }
+    }
 }

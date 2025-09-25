@@ -7,7 +7,7 @@ public class ExpenseGUI extends JFrame {
     public ExpenseGUI() {
         setTitle("Expense");
         setSize(400, 300);
-        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); // closes only this window
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); 
         setLocationRelativeTo(null);
 
 

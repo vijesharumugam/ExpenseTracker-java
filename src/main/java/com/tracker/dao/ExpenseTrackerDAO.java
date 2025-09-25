@@ -1,5 +1,5 @@
 package com.tracker.dao;
 
-public class expenseDAO {
+public class ExpenseTrackerDAO {
     
 }

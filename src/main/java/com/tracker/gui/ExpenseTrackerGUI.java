@@ -1,10 +1,7 @@
 package com.tracker.gui;
+
 import javax.swing.*;
-
-
 import java.awt.*;
-import com.tracker.gui.CategoryGUI;
-import com.tracker.gui.ExpenseGUI;
 
 public class ExpenseTrackerGUI extends JFrame {
     private JButton categoryButton;
@@ -19,34 +16,28 @@ public class ExpenseTrackerGUI extends JFrame {
         categoryButton = new JButton("CATEGORY");
         expenseButton = new JButton("EXPENSE");
 
-        JPanel buttonPanel = new JPanel(new FlowLayout());
+        setLayout(new GridBagLayout());
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.insets = new Insets(10, 10, 10, 10);
+
+        JPanel buttonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 20, 0));
         buttonPanel.add(categoryButton);
         buttonPanel.add(expenseButton);
 
-        add(buttonPanel, BorderLayout.CENTER);
+        gbc.gridx = 0;
+        gbc.gridy = 0;
+        add(buttonPanel, gbc);
 
         setTitle("Expense Tracker");
         setSize(800, 600);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
     }
-    private void openCategory() {
-    CategoryGUI categoryGUI = new CategoryGUI();
-    categoryGUI.setVisible(true);
-}
 
-    private void openExpense(){
-        ExpenseGUI expenseGUI = new ExpenseGUI();
-        expenseGUI.setVisible(true);
+    private void setupEventListers() {
+        categoryButton.addActionListener(e -> new CategoryGUI().setVisible(true));
+        expenseButton.addActionListener(e -> new ExpenseGUI().setVisible(true));
     }
 
-    private void setupEventListers(){
-        categoryButton.addActionListener((e) -> {
-            openCategory();
-        });
-        expenseButton.addActionListener((e) -> {
-            openExpense();
-        });
-    }
-
+   
 }
