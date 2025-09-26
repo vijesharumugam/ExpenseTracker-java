@@ -63,4 +63,17 @@ public class CategoryDAO {
         String type = rs.getString("type");
         return new Category(id, type);
     }
+    public Category getCategoryById(int id) throws SQLException {
+    String query = "SELECT * FROM category WHERE id = ?";
+    try (Connection cn = DatabaseConnection.getConnection();
+         PreparedStatement ps = cn.prepareStatement(query)) {
+        ps.setInt(1, id);
+        ResultSet rs = ps.executeQuery();
+        if (rs.next()) {
+            return new Category(rs.getInt("id"), rs.getString("type"));
+        }
+    }
+    return null;
+}
+
 }
