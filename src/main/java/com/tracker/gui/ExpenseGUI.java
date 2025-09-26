@@ -138,7 +138,6 @@ public class ExpenseGUI extends JFrame {
         for (Expense exp : expenses) {
             Category cat = null;
             try {
-                // ✅ FIXED: use instance, not class
                 cat = categoryDAO.getCategoryById(exp.getCategoryId());
             } catch (SQLException e) {
                 e.printStackTrace();

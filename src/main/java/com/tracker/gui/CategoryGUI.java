@@ -20,14 +20,6 @@ public class CategoryGUI extends JFrame {
     private JButton refreshButton;
 
     public CategoryGUI() {
-        try {
-            categoryDAO = new CategoryDAO();
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(this, "Error initializing DAO: " + e.getMessage(),
-                    "Database Error", JOptionPane.ERROR_MESSAGE);
-            System.exit(1);
-        }
-
         initializeComponents();
         setupLayout();
         loadTypes();
