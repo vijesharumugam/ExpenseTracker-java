@@ -20,11 +20,13 @@ public class CategoryGUI extends JFrame {
     private JButton refreshButton;
 
     public CategoryGUI() {
-        initializeComponents();
-        setupLayout();
-        loadTypes();
-        setupEventListeners();
-    }
+    categoryDAO = new CategoryDAO();
+    initializeComponents();
+    setupLayout();
+    loadTypes();
+    setupEventListeners();
+}
+
 
     private void initializeComponents() {
         setTitle("Category Manager");
